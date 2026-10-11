@@ -193,19 +193,93 @@
         </div>
     </footer>
 
-    <!-- SCRIPT UTAMA -->
+    <!-- SCRIPT DATA LANGSUNG (TANPA FETCH EKSTERNAL) -->
     <script>
-        let allProducts = [];
+        const allProducts = [
+            {
+                "id": "abu-batu",
+                "name": "ABU BATU",
+                "category": "Agregat Halus",
+                "description": "Material agregat halus untuk kebutuhan konstruksi.",
+                "spec": "Ukuran halus, bersih dari kotoran.",
+                "image": "https://picsum.photos/seed/abubatu/600/400"
+            },
+            {
+                "id": "batu-split-12",
+                "name": "BATU SPLIT 1/2",
+                "category": "Batu Split",
+                "description": "Agregat batu pecah untuk campuran beton.",
+                "spec": "Ukuran 10-20 mm, kuat dan keras.",
+                "image": "https://picsum.photos/seed/split12/600/400"
+            },
+            {
+                "id": "batu-split-23",
+                "name": "BATU SPLIT 2/3",
+                "category": "Batu Split",
+                "description": "Material agregat untuk struktur beton.",
+                "spec": "Ukuran 20-30 mm, gradasi stabil.",
+                "image": "https://picsum.photos/seed/split23/600/400"
+            },
+            {
+                "id": "batu-split-35",
+                "name": "BATU SPLIT 3/5",
+                "category": "Batu Split",
+                "description": "Agregat batu pecah ukuran besar.",
+                "spec": "Ukuran 30-50 mm, untuk lapis pondasi.",
+                "image": "https://picsum.photos/seed/split35/600/400"
+            },
+            {
+                "id": "base-course-a",
+                "name": "BASE COURSE A",
+                "category": "Pondasi Jalan",
+                "description": "Material lapis pondasi agregat jalan.",
+                "spec": "Gradasi standar Bina Marga.",
+                "image": "https://picsum.photos/seed/basea/600/400"
+            },
+            {
+                "id": "base-course-b",
+                "name": "BASE COURSE B",
+                "category": "Pondasi Jalan",
+                "description": "Material lapis pondasi kelas B.",
+                "spec": "Proporsi sesuai teknis.",
+                "image": "https://picsum.photos/seed/baseb/600/400"
+            },
+            {
+                "id": "sirtu",
+                "name": "SIRTU",
+                "category": "Pasir & Batu",
+                "description": "Campuran pasir dan batu alam.",
+                "spec": "Proporsional alami.",
+                "image": "https://picsum.photos/seed/sirtu/600/400"
+            },
+            {
+                "id": "makadam",
+                "name": "MAKADAM",
+                "category": "Pondasi Jalan",
+                "description": "Batu perkerasan lapis bawah.",
+                "spec": "Pecah batu besar.",
+                "image": "https://picsum.photos/seed/makadam/600/400"
+            },
+            {
+                "id": "pasir-konstruksi",
+                "name": "PASIR KONSTRUKSI",
+                "category": "Agregat Halus",
+                "description": "Pasir berkualitas untuk adukan.",
+                "spec": "Tajam dan bersih dari kotoran.",
+                "image": "https://picsum.photos/seed/pasir/600/400"
+            },
+            {
+                "id": "tanah-urug",
+                "name": "TANAH URUG",
+                "category": "Urugan & Lahan",
+                "description": "Material penimbunan tapak proyek.",
+                "spec": "Tanah pilihan pemadatan.",
+                "image": "https://picsum.photos/seed/urug/600/400"
+            }
+        ];
 
-        // Memuat data dari products.json dengan penangkal cache ?v=999
-        fetch('products.json?v=999')
-            .then(response => response.json())
-            .then(data => {
-                allProducts = data;
-                renderProducts(allProducts);
-                addMaterialRow();
-            })
-            .catch(error => console.error('Gagal memuat products.json:', error));
+        renderProducts(allProducts);
+        addMaterialRow();
 
         document.getElementById('mobile-menu-btn').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
@@ -232,47 +306,4 @@
                             <span class="absolute top-3 left-3 text-[11px] font-semibold text-accent bg-slate-950/80 border border-slate-800 px-3 py-1 rounded-full">${p.category}</span>
                         </div>
                         <div class="p-6 space-y-3">
-                            <h3 class="text-lg font-extrabold text-white">${p.name}</h3>
-                            <p class="text-slate-400 text-xs">${p.description}</p>
-                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300">
-                                <span class="font-bold text-accent">Spesifikasi:</span> ${p.spec}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6 pt-0">
-                        <a href="${wa}" target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 rounded-xl font-bold text-xs shadow-md">
-                            <i class="fa-brands fa-whatsapp mr-1 text-base"></i> Tanya Harga via WhatsApp
-                        </a>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        const searchInput = document.getElementById('search-input');
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            const filtered = allProducts.filter(p => p.name.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
-            renderProducts(filtered);
-        });
-
-        function filterCategory(cat) {
-            if (cat === 'all') {
-                renderProducts(allProducts);
-            } else {
-                const filtered = allProducts.filter(p => p.category === cat);
-                renderProducts(filtered);
-            }
-        }
-
-        function addMaterialRow() {
-            const container = document.getElementById('material-rows-container');
-            const div = document.createElement('div');
-            div.className = 'grid grid-cols-1 sm:grid-cols-12 gap-4 bg-slate-900 p-4 rounded-2xl border border-slate-800 items-end material-row';
-            let opts = '<option value="" disabled selected>Pilih Material</option>';
-            allProducts.forEach(p => { opts += `<option value="${p.name}">${p.name}</option>`; });
-            div.innerHTML = `
-                <div class="sm:col-span-4 space-y-1"><label class="text-[10px] text-slate-400 uppercase">Material</label><select class="mat-name w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white" required>${opts}</select></div>
-                <div class="sm:col-span-3 space-y-1"><label class="text-[10px] text-slate-400 uppercase">Spesifikasi</label><input type="text" class="mat-spec w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white" placeholder="Ukuran" required></div>
-                <div class="sm:col-span-2 space-y-1"><label class="text-[10px] text-slate-400 uppercase">Volume</label><input type="text" class="mat-vol w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white" placeholder="Jumlah" required></div>
-                <div class="sm:col-span-2 space-y-1"><label class="text-[10px] text-slate-400 uppercase">Satuan</label><select class="mat-unit w-full bg-slate-950 border border-slate-800 rounded-xl p-2.5 text-xs text-white"><option value="ton">Ton</option><option value="m³">m³</option
+                            <h3 class="text-lg font-extrabold text-white">${p.name}</
