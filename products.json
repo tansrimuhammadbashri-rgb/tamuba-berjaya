@@ -1,0 +1,82 @@
+[
+  {
+    "id": "abu-batu",
+    "name": "ABU BATU",
+    "category": "Agregat Halus",
+    "description": "Material agregat halus yang dapat digunakan untuk berbagai kebutuhan pekerjaan konstruksi sesuai spesifikasi proyek.",
+    "spec": "Ukuran halus, bersih dari kotoran organik, sesuai standar agregat halus.",
+    "image": "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "batu-split-12",
+    "name": "BATU SPLIT 1/2",
+    "category": "Batu Pecah / Split",
+    "description": "Agregat batu pecah untuk kebutuhan campuran beton dan pekerjaan konstruksi sesuai spesifikasi teknis.",
+    "spec": "Ukuran 10-20 mm, bersudut tajam, kuat dan keras.",
+    "image": "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "batu-split-23",
+    "name": "BATU SPLIT 2/3",
+    "category": "Batu Pecah / Split",
+    "description": "Material agregat batu pecah untuk kebutuhan konstruksi yang memerlukan ukuran agregat lebih besar sesuai perencanaan pekerjaan.",
+    "spec": "Ukuran 20-30 mm, gradasi stabil untuk struktur beton.",
+    "image": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "batu-split-35",
+    "name": "BATU SPLIT 3/5",
+    "category": "Batu Pecah / Split",
+    "description": "Agregat batu pecah berukuran lebih besar untuk pekerjaan konstruksi tertentu sesuai spesifikasi yang dibutuhkan.",
+    "spec": "Ukuran 30-50 mm, cocok untuk pengurugan khusus dan lapis pondasi.",
+    "image": "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "base-course-a",
+    "name": "BASE COURSE A",
+    "category": "Pondasi Jalan",
+    "description": "Material lapis pondasi agregat untuk pekerjaan jalan sesuai spesifikasi teknis yang dipersyaratkan.",
+    "spec": "Gradasi campuran agregat kasar dan halus sesuai standar Bina Marga/spesifikasi proyek.",
+    "image": "https://images.unsplash.com/photo-1541888946425-d0fbb18f7247?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "base-course-b",
+    "name": "BASE COURSE B",
+    "category": "Pondasi Jalan",
+    "description": "Material lapis pondasi agregat untuk kebutuhan pekerjaan jalan berdasarkan spesifikasi dan perencanaan proyek.",
+    "spec": "Agregat kelas B dengan proporsi lempung/batu pecah sesuai perencanaan teknis.",
+    "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "sirtu",
+    "name": "SIRTU",
+    "category": "Pasir & Batu",
+    "description": "Material pasir dan batu untuk kebutuhan urugan atau pekerjaan konstruksi tertentu sesuai karakteristik material.",
+    "spec": "Campuran alami pasir dan bebatuan proporsional.",
+    "image": "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "makadam",
+    "name": "MAKADAM",
+    "category": "Pondasi Jalan",
+    "description": "Material batu untuk pekerjaan perkerasan jalan dan kebutuhan konstruksi sesuai metode pekerjaan.",
+    "spec": "Batu pecah besar (mesin/manual) untuk lapisan bawah jalan.",
+    "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "pasir-konstruksi",
+    "name": "PASIR KONSTRUKSI",
+    "category": "Agregat Halus",
+    "description": "Material pasir untuk kebutuhan konstruksi dengan jenis dan spesifikasi yang dikonfirmasi sebelum pemesanan.",
+    "spec": "Pasir pasang/beton dengan butiran tajam dan bebas dari kotoran berlebih.",
+    "image": "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "tanah-urug",
+    "name": "TANAH URUG",
+    "category": "Urugan & Lahan",
+    "description": "Material urugan untuk kebutuhan penimbunan dan perataan lahan sesuai karakteristik material serta kebutuhan lokasi proyek.",
+    "spec": "Tanah pilihan untuk pemadatan dan penimbunan tapak proyek.",
+    "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80"
+  }
+]
