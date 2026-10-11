@@ -618,7 +618,7 @@
         let allProducts = [];
 
         // Fetch products data
-        fetch('products.json')
+        fetch('products.json?v=2')
             .then(response => response.json())
             .then(data => {
                 allProducts = data;
