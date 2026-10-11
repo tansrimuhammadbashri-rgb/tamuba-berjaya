@@ -54,29 +54,29 @@
                 </a>
             </div>
 
-            <!-- TOMBOL GARIS TIGA (MOBILE MENU BUTTON) -->
-            <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2.5 rounded-xl bg-slate-900 border border-slate-800 focus:outline-none">
+            <!-- TOMBOL GARIS TIGA (DIJAMIN LANGSUNG BUKA-TUTUP) -->
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="lg:hidden text-slate-300 hover:text-white p-2.5 rounded-xl bg-slate-900 border border-slate-800 focus:outline-none">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
 
-        <!-- DROPDOWN MENU MOBILE (DENGAN ID YANG TEPAT) -->
+        <!-- DROPDOWN MENU MOBILE (DENGAN TOMBOL TUTUP OTOMATIS) -->
         <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-6 py-6 space-y-4 shadow-2xl">
-            <a href="#beranda" class="block text-slate-300 hover:text-accent font-medium py-2 mobile-nav-link">Beranda</a>
-            <a href="#katalog" class="block text-slate-300 hover:text-accent font-medium py-2 mobile-nav-link">Katalog Material</a>
-            <a href="#layanan" class="block text-slate-300 hover:text-accent font-medium py-2 mobile-nav-link">Layanan</a>
-            <a href="#tentang" class="block text-slate-300 hover:text-accent font-medium py-2 mobile-nav-link">Tentang Kami</a>
-            <a href="#faq" class="block text-slate-300 hover:text-accent font-medium py-2 mobile-nav-link">FAQ</a>
-            <a href="#kontak" class="block text-slate-300 hover:text-accent font-medium py-2 mobile-nav-link">Kontak</a>
+            <a href="#beranda" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-300 hover:text-accent font-medium py-2">Beranda</a>
+            <a href="#katalog" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-300 hover:text-accent font-medium py-2">Katalog Material</a>
+            <a href="#layanan" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-300 hover:text-accent font-medium py-2">Layanan</a>
+            <a href="#tentang" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-300 hover:text-accent font-medium py-2">Tentang Kami</a>
+            <a href="#faq" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-300 hover:text-accent font-medium py-2">FAQ</a>
+            <a href="#kontak" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-slate-300 hover:text-accent font-medium py-2">Kontak</a>
             <div class="pt-4 border-t border-slate-800">
-                <a href="#penawaran" class="block text-center bg-accent hover:bg-accentdark text-white px-5 py-3 rounded-xl font-semibold text-sm shadow-lg mobile-nav-link">
+                <a href="#penawaran" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block text-center bg-accent hover:bg-accentdark text-white px-5 py-3 rounded-xl font-semibold text-sm shadow-lg">
                     <i class="fa-solid fa-file-contract mr-2"></i> Minta Penawaran
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section id="beranda" class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 bg-slate-900 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -113,7 +113,7 @@
         </div>
     </section>
 
-    <!-- KATALOG MATERIAL (IKON SESUAI & COCOK) -->
+    <!-- KATALOG MATERIAL (IKON SPESIFIK & SESUAI MASING-MASING MATERIAL) -->
     <section id="katalog" class="py-24 bg-slate-950">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -129,15 +129,15 @@
                     <div>
                         <div class="h-44 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 flex items-center justify-center relative border-b border-slate-800">
                             <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 text-accent flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">
-                                <i class="fa-solid fa-circle-dot"></i>
+                                <i class="fa-solid fa-water"></i>
                             </div>
                             <span class="absolute top-3 left-3 text-[11px] font-semibold text-accent bg-slate-950/90 border border-slate-800 px-3 py-1 rounded-full">Agregat Halus</span>
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-lg font-extrabold text-white">ABU BATU</h3>
-                            <p class="text-slate-400 text-xs leading-relaxed">Material agregat halus untuk kebutuhan konstruksi.</p>
+                            <p class="text-slate-400 text-xs leading-relaxed">Material agregat halus sisa pemecahan batu untuk campuran cor dan pengurugan halus.</p>
                             <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300">
-                                <span class="font-bold text-accent">Spesifikasi:</span> Ukuran halus, bersih dari kotoran.
+                                <span class="font-bold text-accent">Spesifikasi:</span> Ukuran butiran halus, bersih dari kotoran organik.
                             </div>
                         </div>
                     </div>
@@ -159,9 +159,9 @@
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-lg font-extrabold text-white">BATU SPLIT 1/2</h3>
-                            <p class="text-slate-400 text-xs leading-relaxed">Agregat batu pecah untuk campuran beton.</p>
+                            <p class="text-slate-400 text-xs leading-relaxed">Agregat batu pecah mesin untuk campuran struktur beton bangunan dan jalan.</p>
                             <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300">
-                                <span class="font-bold text-accent">Spesifikasi:</span> Ukuran 10-20 mm, kuat dan keras.
+                                <span class="font-bold text-accent">Spesifikasi:</span> Ukuran 10-20 mm, bersudut tajam, kuat dan keras.
                             </div>
                         </div>
                     </div>
@@ -183,6 +183,59 @@
                         </div>
                         <div class="p-6 space-y-3">
                             <h3 class="text-lg font-extrabold text-white">BATU SPLIT 2/3</h3>
-                            <p class="text-slate-400 text-xs leading-relaxed">Material agregat untuk struktur beton.</p>
-                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-80
-                                
+                            <p class="text-slate-400 text-xs leading-relaxed">Material agregat batu pecah ukuran sedang untuk pengecoran beton bertulang.</p>
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300">
+                                <span class="font-bold text-accent">Spesifikasi:</span> Ukuran 20-30 mm, gradasi stabil untuk struktur.</
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/6285781050015?text=Halo%20TAMUBA%20BERJAYA,%20saya%20ingin%20menanyakan%20harga%20dan%20ketersediaan%20BATU%20SPLIT%202/3." target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 rounded-xl font-bold text-xs shadow-md transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i><span>Tanya Harga via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. BATU SPLIT 3/5 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl group hover:border-accent/50 transition-all">
+                    <div>
+                        <div class="h-44 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 flex items-center justify-center relative border-b border-slate-800">
+                            <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 text-accent flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-mountain"></i>
+                            </div>
+                            <span class="absolute top-3 left-3 text-[11px] font-semibold text-accent bg-slate-950/90 border border-slate-800 px-3 py-1 rounded-full">Batu Split</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-extrabold text-white">BATU SPLIT 3/5</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">Agregat batu pecah ukuran besar untuk pengurugan khusus dan lapis pondasi.</p>
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300">
+                                <span class="font-bold text-accent">Spesifikasi:</span> Ukuran 30-50 mm, kokoh dan padat.</
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/6285781050015?text=Halo%20TAMUBA%20BERJAYA,%20saya%20ingin%20menanyakan%20harga%20dan%20ketersediaan%20BATU%20SPLIT%203/5." target="_blank" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 rounded-xl font-bold text-xs shadow-md transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i><span>Tanya Harga via WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. BASE COURSE A -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between shadow-xl group hover:border-accent/50 transition-all">
+                    <div>
+                        <div class="h-44 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 flex items-center justify-center relative border-b border-slate-800">
+                            <div class="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 text-accent flex items-center justify-center text-3xl shadow-lg group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+                            <span class="absolute top-3 left-3 text-[11px] font-semibold text-accent bg-slate-950/90 border border-slate-800 px-3 py-1 rounded-full">Pondasi Jalan</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-extrabold text-white">BASE COURSE A</h3>
+                            <p class="text-slate-400 text-xs leading-relaxed">Material lapis pondasi atas untuk konstruksi perkerasan jalan raya.</p>
+                            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-[11px] text-slate-300">
+                                <span class="font-bold text-accent">Spesifikasi:</span> Gradasi campuran agregat kasar & halus standar Bina Marga.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/6285781050015?text=Halo%20TAMUBA%20BERJAYA,%20saya%20ingin%20menanyakan%20harga%20dan%20ketersediaan%20BASE%20COURSE%20A." target="_blank" class="block w-full bg-emerald-600 ho
